@@ -35,7 +35,7 @@ function App() {
 
   function divide(e) {
     // Add the code for the divide function
-    e.preventDefault();
+    // e.preventDefault();
     setResult(Number(input1) / Number(input2));
   }
 
