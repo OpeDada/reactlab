@@ -1,8 +1,5 @@
-import React from 'react'
-import {
-  useState,
-  useRef
-} from "react";
+import React from "react";
+import { useState, useRef } from "react";
 import "./App.css";
 
 function App() {
@@ -13,33 +10,37 @@ function App() {
   function plus(e) {
     e.preventDefault();
     setResult((result) => result + Number(inputRef.current.value));
-  };
+  }
 
   function minus(e) {
-  	// Add the code for the minus function
+    // Add the code for the minus function
     e.preventDefault();
     setResult((result) => result - Number(inputRef.current.value));
-  };
+  }
 
   function times(e) {
     // Add the code for the plus function
-    e.preventDefault()
-    setResult((result) => result * Number(inputRef.current.value))
-  };
+    e.preventDefault();
+    setResult((result) => result * Number(inputRef.current.value));
+  }
 
   function divide(e) {
     // Add the code for the divide function
-      e.preventDefault();
-      setResult((result) => result / Number(inputRef.current.value));
-  };
+    e.preventDefault();
+    setResult((result) => result / Number(inputRef.current.value));
+  }
 
   function resetInput(e) {
     // Add the code for the resetInput function
-  };
+    e.preventDefault();
+    inputRef.current.value = "";
+  }
 
   function resetResult(e) {
-  	// Add the code for the resetResult function
-  };
+    // Add the code for the resetResult function
+    e.preventDefault();
+    resultRef.current.innerHTML = "";
+  }
 
   return (
     <div className="App">
@@ -47,14 +48,14 @@ function App() {
         <h1>Simplest Working Calculator</h1>
       </div>
       <form>
-        <p ref={resultRef}>{/* add the value of the current total */}</p>
+        <p ref={resultRef}>{inputRef.current.value}</p>
         <input
           pattern="[0-9]"
           ref={inputRef}
           type="number"
           placeholder="Type a number"
         />
-        <button onClick={plus}>add</button>
+        <button onClick={plus}>Add</button>
         <button onClick={minus}>Subtract</button>
         <button onClick={times}>Multiply</button>
         <button onClick={divide}>Divide</button>
