@@ -27,7 +27,7 @@ function App() {
     setResult(Number(input1) - Number(input2));
   }
 
-  function multiply(e) {
+  function times(e) {
     // Add the code for the plus function
     e.preventDefault();
     setResult(Number(input1) * Number(input2));
@@ -35,7 +35,7 @@ function App() {
 
   function divide(e) {
     // Add the code for the divide function
-    // e.preventDefault();
+    e.preventDefault();
     setResult(Number(input1) / Number(input2));
   }
 
@@ -74,11 +74,9 @@ function App() {
         <h2>Result: {result}</h2>
         <button onClick={plus}>Add</button>
         <button onClick={minus}>Subtract</button>
-        <button onClick={multiply}>Multiply</button>
+        <button onClick={times}>Multiply</button>
         <button onClick={divide}>Divide</button>
-        <button onClick={resetInput} value="clear">
-          Reset Input
-        </button>
+        <button onClick={resetInput}>Reset Input</button>
         <button onClick={resetResult}>Reset Result</button>
       </form>
     </div>
